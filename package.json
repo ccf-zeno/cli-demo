@@ -1,0 +1,38 @@
+{
+  "name": "igloo-pa-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "pa-cli": "bin/www.js"
+  },
+  "scripts": {
+    "compile": "babel src -d dist",
+    "watch": "npm run compile -- --watch",
+    "build": "rollup --config --bundleConfigAsCjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-json": "^5.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@types/inquirer": "^9.0.2",
+    "@types/node": "^18.11.2",
+    "@types/fs-extra": "^9.0.13",
+    "rollup": "^3.2.3",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-progress": "^1.1.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "commander": "^9.4.1",
+    "fs-extra": "^10.1.0",
+    "ora": "^6.1.2",
+    "inquirer": "^9.1.4",
+    "download-git-repo": "^3.0.2"
+  }
+}
